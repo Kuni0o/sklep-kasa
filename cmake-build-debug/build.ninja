@@ -61,6 +61,12 @@ build CMakeFiles/sklep_kasa.dir/src/Product.cpp.obj: CXX_COMPILER__sklep_kasa_un
   OBJECT_DIR = CMakeFiles\sklep_kasa.dir
   OBJECT_FILE_DIR = CMakeFiles\sklep_kasa.dir\src
 
+build CMakeFiles/sklep_kasa.dir/src/Data.cpp.obj: CXX_COMPILER__sklep_kasa_unscanned_Debug C$:/Users/ckuni/Desktop/zadanie/sklep-kasa/src/Data.cpp || cmake_object_order_depends_target_sklep_kasa
+  DEP_FILE = CMakeFiles\sklep_kasa.dir\src\Data.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\sklep_kasa.dir
+  OBJECT_FILE_DIR = CMakeFiles\sklep_kasa.dir\src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target sklep_kasa
@@ -69,7 +75,7 @@ build CMakeFiles/sklep_kasa.dir/src/Product.cpp.obj: CXX_COMPILER__sklep_kasa_un
 #############################################
 # Link the executable sklep_kasa.exe
 
-build sklep_kasa.exe: CXX_EXECUTABLE_LINKER__sklep_kasa_Debug CMakeFiles/sklep_kasa.dir/src/main.cpp.obj CMakeFiles/sklep_kasa.dir/src/Product.cpp.obj
+build sklep_kasa.exe: CXX_EXECUTABLE_LINKER__sklep_kasa_Debug CMakeFiles/sklep_kasa.dir/src/main.cpp.obj CMakeFiles/sklep_kasa.dir/src/Product.cpp.obj CMakeFiles/sklep_kasa.dir/src/Data.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\sklep_kasa.dir
