@@ -1,0 +1,4 @@
+# ninja log v5
+4	331	7581204268832278	build.ninja	dc6983a99c5b1474
+0	754	7581204278360528	CMakeFiles/sklep_kasa.dir/src/main.cpp.obj	bd580e0ec4b04a81
+757	986	7581204280600902	sklep_kasa.exe	b78c5bd99ed27f96

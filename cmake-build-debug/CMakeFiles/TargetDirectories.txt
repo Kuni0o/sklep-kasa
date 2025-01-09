@@ -1,0 +1,3 @@
+C:/Users/ckuni/Desktop/zadanie/sklep-kasa/cmake-build-debug/CMakeFiles/sklep_kasa.dir
+C:/Users/ckuni/Desktop/zadanie/sklep-kasa/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ckuni/Desktop/zadanie/sklep-kasa/cmake-build-debug/CMakeFiles/rebuild_cache.dir
