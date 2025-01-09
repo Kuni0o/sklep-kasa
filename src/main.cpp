@@ -19,7 +19,7 @@ int main() {
             std::cin.ignore(123, '\n');
         }
         if(userOption == 1){ // Opcja dla wyswietlenia listy owocow i warzyw
-            product.displayProduct();
+           
         }else if(userOption == 2){ // Opcja dla dodania produktu do koszyka
             std::cout << "2";
         }else if(userOption == 3){ // Opcja dla wyswietlenia zawartosci koszyka
