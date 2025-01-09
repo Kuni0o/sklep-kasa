@@ -1,0 +1,4 @@
+#ifndef SKLEP_KASA_SHOP_H
+#define SKLEP_KASA_SHOP_H
+
+#endif //SKLEP_KASA_SHOP_H
