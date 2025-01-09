@@ -42,5 +42,5 @@ std::string Product::getUnitType() {
 }
 
 void Product::displayProduct() {
-    std::cout << name << ", Kod: " << code << ", "<< "Cena: " << unitPrice;
+    std::cout << name << ", Kod: " << code << ", "<< "Cena: " << unitPrice << "\n";
 }

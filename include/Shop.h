@@ -1,6 +1,17 @@
 #ifndef SKLEP_KASA_SHOP_H
 #define SKLEP_KASA_SHOP_H
-class Shop{
+#include <vector>
+#include "Product.h"
+#include "Data.h"
 
+class Shop {
+private:
+    std::vector<Product> products; // Tablica przechowująca obiekty Product
+
+public:
+    // Metoda dodajaca produkt do wektora
+    void addProduct(const Product& product);
+    void loadProductsFromCSV(const std::string& fileName);
+    void displayProducts();
 };
 #endif //SKLEP_KASA_SHOP_H

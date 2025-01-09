@@ -1,18 +1,12 @@
 #include <iostream>
 #include "../include/Data.h"
 #include "../include/Product.h"
+#include "../include/Shop.h"
 
 int main() {
     bool isProgramOn = true; // Zmienna odpowiedzialana za dzialanie glownej petli programu
-    std::vector<std::string> row = Data::getValuesFromCSVRow("../data/products.csv", 2);
-    Data d;
-    double unitPrice = std::stod(row[0]);  // Konwertujemy cenę na double
-    std::string code = row[1];             // Kod produktu
-    std::string name = row[2];             // Nazwa produktu
-    std::string unitType = row[3];         // Typ jednostki
-
-    // Tworzenie obiektu Product
-    Product produkt =  Product(unitPrice, code, name, unitType);
+    Shop shop;
+    shop.loadProductsFromCSV("../data/products.csv");
     while(isProgramOn){
         int userOption = 0; // Inicjalizacja zmiennej odpowiedzialnej za wykonanie danej opcji
         // Wyswietlenie menu dla uzytkownika
@@ -30,8 +24,7 @@ int main() {
             std::cin.ignore(123, '\n');
         }
         if(userOption == 1){ // Opcja dla wyswietlenia listy owocow i warzyw
-            produkt.displayProduct();
-            std::cout << d.getNumberOfRows("../data/products.csv");
+            shop.displayProducts();
         }else if(userOption == 2){ // Opcja dla dodania produktu do koszyka
             std::cout << "2";
         }else if(userOption == 3){ // Opcja dla wyswietlenia zawartosci koszyka
