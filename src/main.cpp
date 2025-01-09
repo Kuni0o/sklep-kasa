@@ -11,8 +11,12 @@ int main() {
         std::cout << "3. Wyswietl zawartosc koszyka" << std::endl;
         std::cout << "4. Oblicz sume zakupow" <<std::endl;
         std::cout << "5. Zakoncz" <<std::endl;
-        std::cout << "Wybierz opcje: ";
-        std::cin >> userOption;
+        std::cout << "Wybierz opcje:";
+        while(!(std::cin >> userOption)){
+            std::cout << "Blad, wprowadz ponownie:";
+            std::cin.clear();
+            std::cin.ignore(123, '\n');
+        }
         if(userOption == 1){
             std::cout << "1";
         }else if(userOption == 2){
