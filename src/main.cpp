@@ -1,11 +1,14 @@
 #include <iostream>
+#include <algorithm>
 #include "../include/Data.h"
 #include "../include/Product.h"
 #include "../include/Shop.h"
+#include "../include/Basket.h"
 
 int main() {
     bool isProgramOn = true; // Zmienna odpowiedzialana za dzialanie glownej petli programu
     Shop shop;
+    Basket basket;
     shop.loadProductsFromCSV("../data/products.csv");
     while(isProgramOn){
         int userOption = 0; // Inicjalizacja zmiennej odpowiedzialnej za wykonanie danej opcji
@@ -26,9 +29,31 @@ int main() {
         if(userOption == 1){ // Opcja dla wyswietlenia listy owocow i warzyw
             shop.displayProducts();
         }else if(userOption == 2){ // Opcja dla dodania produktu do koszyka
-            std::cout << "2";
-        }else if(userOption == 3){ // Opcja dla wyswietlenia zawartosci koszyka
-            std::cout << "3";
+            std::string code;
+            double quantity;
+            std::cout << "Wprowadz kod: ";
+            std::cin >> code;
+            std::cout << "Wprowadz ilosc: ";
+            std::cin >> quantity;
+
+            auto products = shop.getProducts();
+            bool productFound = false;
+
+            for (auto& product : products) {
+                if (product.getCode() == code) {
+                    // Dodanie produktu do koszyka
+                    basket.addProduct(product, quantity);
+                    std::cout << "Produkt dodany do koszyka.\n";
+                    productFound = true;
+                    break; // Zatrzymaj pętlę, jeśli produkt został znaleziony
+                }
+            }
+
+            if (!productFound) {
+                std::cout << "Nie znaleziono produktu o podanym kodzie.\n";
+            }
+        } else if(userOption == 3) { // Opcja dla wyswietlenia zawartosci koszyka
+            basket.displayBasket();
         }else if(userOption == 4){ // Opcja dla obliczenia sumy zakupow
             std::cout << "4";
         }else if(userOption == 5){ // Opcja dla zakonczenia programu

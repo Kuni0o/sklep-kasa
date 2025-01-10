@@ -31,7 +31,7 @@ void Shop::loadProductsFromCSV(const std::string& fileName) {
         }
     }
 }
-// Wyświetla listę produktów
+// Wyswietla liste produktow
 void Shop::displayProducts(){
     if (products.empty()) {
         std::cout << "Brak produktow w sklepie." << std::endl;
@@ -42,5 +42,9 @@ void Shop::displayProducts(){
     for (auto& product : products) {
         product.displayProduct();
     }
+}
+// Getter
+const std::vector<Product>& Shop::getProducts() const {
+    return products;
 }
 

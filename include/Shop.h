@@ -13,5 +13,7 @@ public:
     void addProduct(const Product& product);
     void loadProductsFromCSV(const std::string& fileName);
     void displayProducts();
+    // Getter do wektora
+    const std::vector<Product>& getProducts() const;
 };
 #endif //SKLEP_KASA_SHOP_H
