@@ -22,7 +22,7 @@ public:
     void displayBasket();
 
     // Obliczenie calkowitej wartosci koszyka
-    double calculateTotal(const std::vector<Product>& products);
+    double calculateTotal(std::vector<Product>& products);
 };
 
 #endif // BASKET_H

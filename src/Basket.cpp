@@ -70,3 +70,20 @@ void Basket::displayBasket() {
         std::cout << "Kod: " << item.first << ", Ilosc: " << item.second << " kg" << "\n";
     }
 }
+
+double Basket::calculateTotal(std::vector<Product>& products){
+    double total = 0;
+    for (auto& product : products) {
+        for (const auto& item : itemsByCount) {
+            if(item.first == product.getCode()){
+                total += item.second * product.getUnitPirce();
+            }
+        }
+        for (const auto& item : itemsByWeight) {
+            if(item.first == product.getCode()) {
+                total += item.second * product.getUnitPirce();
+            }
+        }
+    }
+    return total;
+}

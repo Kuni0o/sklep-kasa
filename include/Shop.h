@@ -6,7 +6,8 @@
 
 class Shop {
 private:
-    std::vector<Product> products; // Tablica przechowująca obiekty Product
+    // Tablica przechowujaca obiekty Product
+    std::vector<Product> products;
 
 public:
     // Metoda dodajaca produkt do wektora
