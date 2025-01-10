@@ -21,10 +21,46 @@ void Basket::addProduct(Product &product, double quantity) {
                 itemsByCount[product.getCode()] = quantity; // Dodanie nowego produktu
             }
         }else{
-            std::cout << "ER";
+            std::cout << "Nie udalo sie dodac produktu. Sztuki musza byc liczba calkowita dodatnia.";
         }
     }
 }
+
+void Basket::removeProduct(Product &product, double quantity) {
+    double intpart;
+    if(product.getUnitType() == "w"){
+        // Usuniecie produktu z koszyka
+        if (itemsByWeight.find(product.getCode()) != itemsByWeight.end()) {
+            if(itemsByWeight[product.getCode()] == quantity){
+                itemsByWeight.erase(product.getCode());
+            }else if(itemsByWeight[product.getCode()] < quantity){
+                std::cout << "Ilosc do usuniecia przekracza, ilosc w koszyku.";
+            }else{
+                itemsByWeight[product.getCode()] -= quantity;
+            }
+        } else {
+            std::cout << "Produkt o podanym kodzie nie znajduje sie w koszyku.";
+        }
+    }else if(product.getUnitType() == "s"){
+        if(modf(quantity, &intpart) == 0){
+            // Usuniecie produktu z koszyka
+            if (itemsByWeight.find(product.getCode()) != itemsByWeight.end()) {
+                if(itemsByWeight[product.getCode()] == quantity){
+                    itemsByWeight.erase(product.getCode());
+                }else if(itemsByWeight[product.getCode()] < quantity){
+                    std::cout << "Ilosc do usuniecia przekracza, ilosc w koszyku.";
+                }else{
+                    itemsByWeight[product.getCode()] -= quantity;
+                }
+            } else {
+                std::cout << "Produkt o podanym kodzie nie znajduje sie w koszyku.";
+            }
+        }else{
+            std::cout << "Nie udalo sie usunac produktu. Sztuki musza byc liczba calkowita dodatnia.";
+        }
+    }
+}
+
 void Basket::displayBasket() {
     std::cout << "\n---ZAWARTOSC KOSZYKA---\n";
     for (const auto& item : itemsByCount) {

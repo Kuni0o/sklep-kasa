@@ -57,10 +57,35 @@ int main() {
                 std::cout << "Nie znaleziono produktu o podanym kodzie.";
             }
         } else if(userOption == 3) { // Opcja dla usuniecia produktu z koszyka
-            basket.displayBasket();
+            std::string code;
+            double quantity;
+            std::cout << "\nWprowadz kod:";
+            std::cin >> code;
+            std::cout << "Wprowadz ilosc:";
+            while(!(std::cin >> quantity)){
+                std::cout << "Podana wartosc musi byc liczba dodatnia:";
+                std::cin.clear();
+                std::cin.ignore(123, '\n');
+            }
+            auto products = shop.getProducts();
+            bool productFound = false;
+            for (auto& product : products) {
+                if (product.getCode() == code) {
+                    // Dodanie produktu do koszyka
+                    basket.removeProduct(product, quantity);
+                    std::cout << "Produkt usuniety z koszyka.";
+                    productFound = true;
+                    break;
+                }
+            }
+            if (!productFound) {
+                std::cout << "Nie znaleziono produktu o podanym kodzie.";
+            }
         }else if(userOption == 4){ // Opcja dla wyswietlenia zawartosci koszyka
-            std::cout << "elo";
-        }else if(userOption == 5){ // Opcja dla zakonczenia programu
+            basket.displayBasket();
+        }else if(userOption == 5){ // Opcja dla wyswietlenia zawartosci koszyka
+            std::cout << "siemano";
+        }else if(userOption == 6){ // Opcja dla zakonczenia programu
             isProgramOn = false;
         }else{
             std::cout<< "Podana opcja jest niepoprawna.";

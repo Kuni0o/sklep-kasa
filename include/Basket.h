@@ -15,6 +15,9 @@ public:
     // Dodanie produktu do koszyka
     void addProduct(Product& product, double quantity);
 
+    // Usuniecie produktu z koszyka
+    void removeProduct(Product& product, double quantity);
+
     // Wyswietlenie zawartosci koszyka
     void displayBasket();
 
