@@ -21,6 +21,10 @@ public:
     void displaySummary(std::vector<Product>& products, double total);
     // Metoda do obliczenie calkowitej wartosci koszyka
     double calculateTotal(std::vector<Product>& products);
+    // Metoda do wyczyszczenia mapy itemsByWeight
+    void clearItemsByWeight();
+    // Metoda do wyczyszczenia mapy itemsByCount
+    void clearItemsByCount();
 };
 
 #endif // BASKET_H

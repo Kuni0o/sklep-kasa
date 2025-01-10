@@ -105,3 +105,11 @@ double Basket::calculateTotal(std::vector<Product>& products){
     }
     return total;
 }
+
+void Basket::clearItemsByWeight(){
+    itemsByWeight.clear();
+}
+
+void Basket::clearItemsByCount(){
+    itemsByCount.clear();
+}
