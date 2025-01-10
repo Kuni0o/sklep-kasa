@@ -16,9 +16,10 @@ int main() {
         std::cout << "\n\n-----KASA SKLEPU WARZYWNO-OWOCOWEGO-----" << std::endl;
         std::cout << "1. Wyswietl liste owocow i warzyw" << std::endl;
         std::cout << "2. Dodaj produkt do koszyka" << std::endl;
-        std::cout << "3. Wyswietl zawartosc koszyka" << std::endl;
-        std::cout << "4. Oblicz sume zakupow" <<std::endl;
-        std::cout << "5. Zakoncz" <<std::endl;
+        std::cout << "3. Usun produkt z koszyka" <<std::endl;
+        std::cout << "4. Wyswietl zawartosc koszyka" << std::endl;
+        std::cout << "5. Oblicz sume zakupow" <<std::endl;
+        std::cout << "6. Zakoncz" <<std::endl;
         std::cout << "Wybierz opcje:";
         // Walidacja inputa uzytkownika
         while(!(std::cin >> userOption)){
@@ -55,10 +56,10 @@ int main() {
             if (!productFound) {
                 std::cout << "Nie znaleziono produktu o podanym kodzie.";
             }
-        } else if(userOption == 3) { // Opcja dla wyswietlenia zawartosci koszyka
+        } else if(userOption == 3) { // Opcja dla usuniecia produktu z koszyka
             basket.displayBasket();
-        }else if(userOption == 4){ // Opcja dla obliczenia sumy zakupow
-            std::cout << "4";
+        }else if(userOption == 4){ // Opcja dla wyswietlenia zawartosci koszyka
+            std::cout << "elo";
         }else if(userOption == 5){ // Opcja dla zakonczenia programu
             isProgramOn = false;
         }else{
