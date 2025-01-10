@@ -23,9 +23,6 @@ public:
 
     // Obliczenie calkowitej wartosci koszyka
     double calculateTotal(const std::vector<Product>& products);
-
-    // Sprawdzenie czy koszyk jest pusty
-    bool isEmpty() const;
 };
 
 #endif // BASKET_H
