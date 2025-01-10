@@ -22,7 +22,7 @@ int main() {
         std::cout << "Wybierz opcje:";
         // Walidacja inputa uzytkownika
         while(!(std::cin >> userOption)){
-            std::cout << "Blad, wprowadz ponownie:";
+            std::cout << "Podana wartosc musi byc liczba dodatnia:";
             std::cin.clear();
             std::cin.ignore(123, '\n');
         }
@@ -31,10 +31,14 @@ int main() {
         }else if(userOption == 2){ // Opcja dla dodania produktu do koszyka
             std::string code;
             double quantity;
-            std::cout << "Wprowadz kod: ";
+            std::cout << "\nWprowadz kod:";
             std::cin >> code;
-            std::cout << "Wprowadz ilosc: ";
-            std::cin >> quantity;
+            std::cout << "Wprowadz ilosc:";
+            while(!(std::cin >> quantity)){
+                std::cout << "Podana wartosc musi byc liczba dodatnia:";
+                std::cin.clear();
+                std::cin.ignore(123, '\n');
+            }
 
             auto products = shop.getProducts();
             bool productFound = false;
@@ -43,14 +47,13 @@ int main() {
                 if (product.getCode() == code) {
                     // Dodanie produktu do koszyka
                     basket.addProduct(product, quantity);
-                    std::cout << "Produkt dodany do koszyka.\n";
+                    std::cout << "Produkt dodany do koszyka.";
                     productFound = true;
-                    break; // Zatrzymaj pętlę, jeśli produkt został znaleziony
+                    break;
                 }
             }
-
             if (!productFound) {
-                std::cout << "Nie znaleziono produktu o podanym kodzie.\n";
+                std::cout << "Nie znaleziono produktu o podanym kodzie.";
             }
         } else if(userOption == 3) { // Opcja dla wyswietlenia zawartosci koszyka
             basket.displayBasket();

@@ -1,10 +1,22 @@
 # ninja log v5
-1	282	7582093559942079	build.ninja	dc6983a99c5b1474
+2	709	7582269416438485	build.ninja	dc6983a99c5b1474
 5	1098	7582093035897359	CMakeFiles/sklep_kasa.dir/src/main.cpp.obj	bd580e0ec4b04a81
-1310	1841	7582069889999997	sklep_kasa.exe	b7d50017a75f5987
+1388	1664	7582093578481252	sklep_kasa.exe	efce5769db4d22e8
 4	598	7581392800483395	CMakeFiles/sklep_kasa.dir/src/Product.cpp.obj	7052bf57df3ff17f
 6	827	7581393054825411	CMakeFiles/sklep_kasa.dir/src/Data.cpp.obj	9263035dc3b5c61b
 14	1104	7582058088271941	CMakeFiles/sklep_kasa.dir/src/Shop.cpp.obj	e6ce65cbc62a8bdc
-2	709	7582093559942079	build.ninja	dc6983a99c5b1474
 6	1388	7582093575777644	CMakeFiles/sklep_kasa.dir/src/Basket.cpp.obj	3c33a91bc2c00f54
-1388	1664	7582093578481252	sklep_kasa.exe	efce5769db4d22e8
+4	1112	7582273337779333	CMakeFiles/sklep_kasa.dir/src/main.cpp.obj	bd580e0ec4b04a81
+1112	1541	7582273341997975	sklep_kasa.exe	efce5769db4d22e8
+14	1275	7582275093810265	CMakeFiles/sklep_kasa.dir/src/Shop.cpp.obj	e6ce65cbc62a8bdc
+5	1532	7582275096380424	CMakeFiles/sklep_kasa.dir/src/main.cpp.obj	bd580e0ec4b04a81
+1532	1780	7582275098793660	sklep_kasa.exe	efce5769db4d22e8
+6	1243	7582276486303994	CMakeFiles/sklep_kasa.dir/src/Shop.cpp.obj	e6ce65cbc62a8bdc
+14	1709	7582276490968591	CMakeFiles/sklep_kasa.dir/src/Basket.cpp.obj	3c33a91bc2c00f54
+1709	1948	7582276493301105	sklep_kasa.exe	efce5769db4d22e8
+5	1383	7582278116606911	CMakeFiles/sklep_kasa.dir/src/Basket.cpp.obj	3c33a91bc2c00f54
+1384	1659	7582278119305958	sklep_kasa.exe	efce5769db4d22e8
+5	1333	7582279085412310	CMakeFiles/sklep_kasa.dir/src/Basket.cpp.obj	3c33a91bc2c00f54
+1334	1595	7582279087986919	sklep_kasa.exe	efce5769db4d22e8
+6	1107	7582280293090323	CMakeFiles/sklep_kasa.dir/src/main.cpp.obj	bd580e0ec4b04a81
+1108	1353	7582280295485759	sklep_kasa.exe	efce5769db4d22e8

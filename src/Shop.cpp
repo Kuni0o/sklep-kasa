@@ -38,7 +38,7 @@ void Shop::displayProducts(){
         return;
     }
 
-    std::cout << "\nLista produktow:\n";
+    std::cout << "\n---LISTA PRODUKTOW---\n";
     for (auto& product : products) {
         product.displayProduct();
     }

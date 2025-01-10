@@ -26,13 +26,11 @@ void Basket::addProduct(Product &product, double quantity) {
     }
 }
 void Basket::displayBasket() {
-    std::cout << "Produkty w sztukach:\n";
+    std::cout << "\n---ZAWARTOSC KOSZYKA---\n";
     for (const auto& item : itemsByCount) {
-        std::cout << "Kod: " << item.first << ", Ilość: " << item.second << std::endl;
+        std::cout << "Kod: " << item.first << ", Ilosc: " << item.second << " szt." << "\n";
     }
-
-    std::cout << "Produkty na wagę:\n";
     for (const auto& item : itemsByWeight) {
-        std::cout << "Kod: " << item.first << ", Ilość: " << item.second << " kg" << std::endl;
+        std::cout << "Kod: " << item.first << ", Ilosc: " << item.second << " kg" << "\n";
     }
 }
