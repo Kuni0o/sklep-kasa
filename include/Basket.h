@@ -10,18 +10,16 @@ class Basket {
 private:
     std::unordered_map<std::string, double> itemsByWeight; // Mapa: kod -> ilosc (kg)
     std::unordered_map<std::string, int> itemsByCount;     // Mapa: kod -> ilosc (sztuki)
-
 public:
-    // Dodanie produktu do koszyka
+    // Metoda do dodanie produktu do koszyka
     void addProduct(Product& product, double quantity);
-
-    // Usuniecie produktu z koszyka
+    // Metoda do usuniecie produktu z koszyka
     void removeProduct(Product& product, double quantity);
-
-    // Wyswietlenie zawartosci koszyka
+    // Metoda do wyswietlenie zawartosci koszyka
     void displayBasket();
-
-    // Obliczenie calkowitej wartosci koszyka
+    // Metoda do wyswietlenia podsumowania
+    void displaySummary(std::vector<Product>& products, double total);
+    // Metoda do obliczenie calkowitej wartosci koszyka
     double calculateTotal(std::vector<Product>& products);
 };
 

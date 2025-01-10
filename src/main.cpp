@@ -83,9 +83,9 @@ int main() {
             }
         }else if(userOption == 4){ // Opcja dla wyswietlenia zawartosci koszyka
             basket.displayBasket();
-        }else if(userOption == 5){ // Opcja dla wyswietlenia zawartosci koszyka
+        }else if(userOption == 5){ // Opcja dla przejscia do podsumowania
             double total = basket.calculateTotal(const_cast<std::vector<Product> &>(shop.getProducts()));
-            std::cout << total;
+            basket.displaySummary(const_cast<std::vector<Product> &>(shop.getProducts()), total);
         }else if(userOption == 6){ // Opcja dla zakonczenia programu
             isProgramOn = false;
         }else{

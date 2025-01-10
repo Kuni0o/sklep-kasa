@@ -71,6 +71,24 @@ void Basket::displayBasket() {
     }
 }
 
+void Basket::displaySummary(std::vector<Product>& products, double total){
+    std::cout << "\n---PODSUMOWANIE---\n";
+    for (auto& product : products) {
+        for (const auto& item : itemsByCount) {
+            if(item.first == product.getCode()){
+                std::cout << product.getName() << " " << product.getCode() << " " << item.second << " * " << product.getUnitPirce() << " PLN" << "\n";
+            }
+        }
+        for (const auto& item : itemsByWeight) {
+            if(item.first == product.getCode()) {
+                std::cout << product.getName() << " " << product.getCode() << " " << item.second << " * " << product.getUnitPirce() << " PLN" << "\n";
+            }
+        }
+
+    }
+    std::cout << "RAZEM: " << total << " PLN";
+}
+
 double Basket::calculateTotal(std::vector<Product>& products){
     double total = 0;
     for (auto& product : products) {
