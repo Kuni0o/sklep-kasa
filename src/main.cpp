@@ -84,8 +84,16 @@ int main() {
         }else if(userOption == 4){ // Opcja dla wyswietlenia zawartosci koszyka
             basket.displayBasket();
         }else if(userOption == 5){ // Opcja dla przejscia do podsumowania
-            double total = basket.calculateTotal(const_cast<std::vector<Product> &>(shop.getProducts()));
+            std::string conf;
+            static double total = basket.calculateTotal(const_cast<std::vector<Product> &>(shop.getProducts()));
             basket.displaySummary(const_cast<std::vector<Product> &>(shop.getProducts()), total);
+            std::cout << "\nZatwierdzic podsumowanie? [T/n]";
+            std::cin >> conf;
+            if(conf == "T" || conf == "t"){
+                basket.clearItemsByCount();
+                basket.clearItemsByWeight();
+                total = 0;
+            }
         }else if(userOption == 6){ // Opcja dla zakonczenia programu
             isProgramOn = false;
         }else{
