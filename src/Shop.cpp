@@ -6,12 +6,12 @@ void Shop::addProduct(const Product& product) {
     products.push_back(product);
 }
 
-// Ładuje produkty z pliku CSV
+// Metoda ladujaca produkty z pliku CSV do wektora products
 void Shop::loadProductsFromCSV(const std::string& fileName) {
     Data d;
     int rowCount = d.getNumberOfRows(fileName);
 
-    if (rowCount <= 1) {
+    if (rowCount <= 1) { // Plik  zaweira tylko wiersz naglowkowy lub zaden
         std::cout << "Nie mozna zaladowac produktow, plik jest pusty lub nie istnieje." << std::endl;
         return;
     }

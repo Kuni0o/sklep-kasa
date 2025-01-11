@@ -9,7 +9,8 @@ int main() {
     bool isProgramOn = true; // Zmienna odpowiedzialana za dzialanie glownej petli programu
     Shop shop;
     Basket basket;
-    shop.loadProductsFromCSV("../data/products.csv");
+    shop.loadProductsFromCSV("../data/products.csv"); // Zaladowanie produktow do wektora
+    // Petla do wykonywania programu
     while(isProgramOn){
         int userOption = 0; // Inicjalizacja zmiennej odpowiedzialnej za wykonanie danej opcji
         // Wyswietlenie menu dla uzytkownika
@@ -35,25 +36,26 @@ int main() {
             std::cout << "\nWprowadz kod:";
             std::cin >> code;
             std::cout << "Wprowadz ilosc:";
+            // Walidacja inputa uzytkownika
             while(!(std::cin >> quantity)){
                 std::cout << "Podana wartosc musi byc liczba dodatnia:";
                 std::cin.clear();
                 std::cin.ignore(123, '\n');
             }
-
             auto products = shop.getProducts();
-            bool productFound = false;
-
+            bool found = false;
+            // Petla foreach do dodania kazdego poprawnego elementu wektora products do koszyka
             for (auto& product : products) {
                 if (product.getCode() == code) {
                     // Dodanie produktu do koszyka
-                    basket.addProduct(product, quantity);
-                    std::cout << "Produkt dodany do koszyka.";
-                    productFound = true;
-                    break;
+                    if(basket.addProduct(product, quantity)){
+                        std::cout << "Produkt dodany do koszyka.";
+                        break;
+                    }
+                    found = true;
                 }
             }
-            if (!productFound) {
+            if(!found){
                 std::cout << "Nie znaleziono produktu o podanym kodzie.";
             }
         } else if(userOption == 3) { // Opcja dla usuniecia produktu z koszyka
@@ -62,34 +64,36 @@ int main() {
             std::cout << "\nWprowadz kod:";
             std::cin >> code;
             std::cout << "Wprowadz ilosc:";
+            // Walidacja inputa uzytkownika
             while(!(std::cin >> quantity)){
                 std::cout << "Podana wartosc musi byc liczba dodatnia:";
                 std::cin.clear();
                 std::cin.ignore(123, '\n');
             }
             auto products = shop.getProducts();
-            bool productFound = false;
+            bool found = false;
             for (auto& product : products) {
                 if (product.getCode() == code) {
-                    // Dodanie produktu do koszyka
-                    basket.removeProduct(product, quantity);
-                    std::cout << "Produkt usuniety z koszyka.";
-                    productFound = true;
-                    break;
+                    // Usuniecie produktu z koszyka
+                    if(basket.removeProduct(product, quantity)){
+                        std::cout << "Produkt usuniety z koszyka.";
+                        break;
+                    }
+                    found = true;
                 }
             }
-            if (!productFound) {
+            if(!found){
                 std::cout << "Nie znaleziono produktu o podanym kodzie.";
             }
         }else if(userOption == 4){ // Opcja dla wyswietlenia zawartosci koszyka
             basket.displayBasket();
         }else if(userOption == 5){ // Opcja dla przejscia do podsumowania
             std::string conf;
-            static double total = basket.calculateTotal(const_cast<std::vector<Product> &>(shop.getProducts()));
+            double total = basket.calculateTotal(const_cast<std::vector<Product> &>(shop.getProducts()));
             basket.displaySummary(const_cast<std::vector<Product> &>(shop.getProducts()), total);
             std::cout << "\nZatwierdzic podsumowanie? [T/n]";
             std::cin >> conf;
-            if(conf == "T" || conf == "t"){
+            if(conf == "T" || conf == "t"){ // W przypadku zatwierdzenia podsumowania zerujemy mapy bedace koszykami oraz total
                 basket.clearItemsByCount();
                 basket.clearItemsByWeight();
                 total = 0;

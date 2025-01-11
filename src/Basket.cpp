@@ -2,16 +2,17 @@
 #include <iostream>
 #include <iomanip>
 #include "math.h"
-
-void Basket::addProduct(Product &product, double quantity) {
+// Metoda do dodania produktu do koszyka
+bool Basket::addProduct(Product &product, double quantity) {
     double intpart;
     if(product.getUnitType() == "w"){
         // Dodanie produktu do koszyka
         if (itemsByWeight.find(product.getCode()) != itemsByWeight.end()) {
-            itemsByWeight[product.getCode()] += quantity; // Zwiększenie istniejącej ilości
+            itemsByWeight[product.getCode()] += quantity; // Zwiekszenie istniejccej ilosci
         } else {
             itemsByWeight[product.getCode()] = quantity; // Dodanie nowego produktu
         }
+        return true;
     }else if(product.getUnitType() == "s"){
         if(modf(quantity, &intpart) == 0){
             // Dodanie produktu do koszyka
@@ -20,47 +21,50 @@ void Basket::addProduct(Product &product, double quantity) {
             } else {
                 itemsByCount[product.getCode()] = quantity; // Dodanie nowego produktu
             }
+            return true;
         }else{
             std::cout << "Nie udalo sie dodac produktu. Sztuki musza byc liczba calkowita dodatnia.";
         }
     }
+    return false;
 }
-
-void Basket::removeProduct(Product &product, double quantity) {
+// Metoda do usuniecie produktu z koszyka
+bool Basket::removeProduct(Product &product, double quantity) {
     double intpart;
-    if(product.getUnitType() == "w"){
+    if(product.getUnitType() == "w"){ // Waga
         // Usuniecie produktu z koszyka
         if (itemsByWeight.find(product.getCode()) != itemsByWeight.end()) {
             if(itemsByWeight[product.getCode()] == quantity){
-                itemsByWeight.erase(product.getCode());
+                itemsByWeight.erase(product.getCode()); // Usuniecie produktu z koszyka
+                return true;
             }else if(itemsByWeight[product.getCode()] < quantity){
                 std::cout << "Ilosc do usuniecia przekracza, ilosc w koszyku.";
             }else{
-                itemsByWeight[product.getCode()] -= quantity;
+                itemsByWeight[product.getCode()] -= quantity; // Zmniejszenie ilosci z koszyka
+                return true;
             }
-        } else {
-            std::cout << "Produkt o podanym kodzie nie znajduje sie w koszyku.";
         }
-    }else if(product.getUnitType() == "s"){
+    }else if(product.getUnitType() == "s"){ // Sztuki
         if(modf(quantity, &intpart) == 0){
             // Usuniecie produktu z koszyka
-            if (itemsByWeight.find(product.getCode()) != itemsByWeight.end()) {
-                if(itemsByWeight[product.getCode()] == quantity){
-                    itemsByWeight.erase(product.getCode());
-                }else if(itemsByWeight[product.getCode()] < quantity){
+            if (itemsByCount.find(product.getCode()) != itemsByCount.end()) {
+                if(itemsByCount[product.getCode()] == quantity){
+                    itemsByCount.erase(product.getCode()); // Usuniecie produktu z koszyka
+                    return true;
+                }else if(itemsByCount[product.getCode()] < quantity){
                     std::cout << "Ilosc do usuniecia przekracza, ilosc w koszyku.";
                 }else{
-                    itemsByWeight[product.getCode()] -= quantity;
+                    itemsByCount[product.getCode()] -= quantity; // Zmniejszenie ilosci z koszyka
+                    return true;
                 }
-            } else {
-                std::cout << "Produkt o podanym kodzie nie znajduje sie w koszyku.";
             }
         }else{
             std::cout << "Nie udalo sie usunac produktu. Sztuki musza byc liczba calkowita dodatnia.";
         }
     }
+    return false;
 }
-
+// Metoda do wyswietlenie zawartosci koszyka
 void Basket::displayBasket() {
     std::cout << "\n---ZAWARTOSC KOSZYKA---\n";
     for (const auto& item : itemsByCount) {
@@ -70,7 +74,7 @@ void Basket::displayBasket() {
         std::cout << "Kod: " << item.first << ", Ilosc: " << item.second << " kg" << "\n";
     }
 }
-
+// Metoda do wyswietlenia podsumowania
 void Basket::displaySummary(std::vector<Product>& products, double total){
     std::cout << "\n---PODSUMOWANIE---\n";
     for (auto& product : products) {
@@ -88,7 +92,7 @@ void Basket::displaySummary(std::vector<Product>& products, double total){
     }
     std::cout << "RAZEM: " << total << " PLN";
 }
-
+// Metoda do obliczenie calkowitej wartosci koszyka
 double Basket::calculateTotal(std::vector<Product>& products){
     double total = 0;
     for (auto& product : products) {
@@ -105,11 +109,11 @@ double Basket::calculateTotal(std::vector<Product>& products){
     }
     return total;
 }
-
+// Metoda do wyczyszczenia mapy itemsByWeight
 void Basket::clearItemsByWeight(){
     itemsByWeight.clear();
 }
-
+// Metoda do wyczyszczenia mapy itemsByCount
 void Basket::clearItemsByCount(){
     itemsByCount.clear();
 }

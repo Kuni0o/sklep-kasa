@@ -12,7 +12,9 @@ private:
 public:
     // Metoda dodajaca produkt do wektora
     void addProduct(const Product& product);
+    // Metoda ladujaca produkty z pliku CSV do wektora products
     void loadProductsFromCSV(const std::string& fileName);
+    // Metoda wyswietlajaca zawartosc koszyka
     void displayProducts();
     // Getter do wektora
     const std::vector<Product>& getProducts() const;

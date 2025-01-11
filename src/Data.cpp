@@ -1,6 +1,6 @@
 #include "../include/Data.h"
 #include <iostream>
-// Funkcja zwracająca dane z pliku CSV na podstawie numeru wiersza
+// Metoda zwracająca dane z pliku CSV na podstawie numeru wiersza
 std::vector<std::string> Data::getValuesFromCSVRow(const std::string& fileName, int rowNumber) {
     std::ifstream file(fileName); // plik csv
     std::string line; // wiersz pliku csv
@@ -28,7 +28,7 @@ std::vector<std::string> Data::getValuesFromCSVRow(const std::string& fileName, 
     file.close();
     return rowValues; // Zwracamy wektor z wartościami kolumn
 }
-// Funkcja zwarcajace liczbe wierszy w pliku CSV
+// Metoda zwarcajace liczbe wierszy w pliku CSV
 int Data::getNumberOfRows(const std::string& fileName) {
     std::ifstream file(fileName); // plik csv
     std::string line; // wiersz pliku csv

@@ -12,9 +12,9 @@ private:
     std::unordered_map<std::string, int> itemsByCount;     // Mapa: kod -> ilosc (sztuki)
 public:
     // Metoda do dodanie produktu do koszyka
-    void addProduct(Product& product, double quantity);
+    bool addProduct(Product& product, double quantity);
     // Metoda do usuniecie produktu z koszyka
-    void removeProduct(Product& product, double quantity);
+    bool removeProduct(Product& product, double quantity);
     // Metoda do wyswietlenie zawartosci koszyka
     void displayBasket();
     // Metoda do wyswietlenia podsumowania
