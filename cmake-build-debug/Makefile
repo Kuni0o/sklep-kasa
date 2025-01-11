@@ -259,6 +259,30 @@ tests/BasketTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.s
 .PHONY : tests/BasketTest.cpp.s
 
+tests/ShopTest.o: tests/ShopTest.cpp.o
+.PHONY : tests/ShopTest.o
+
+# target to build an object file
+tests/ShopTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.o
+.PHONY : tests/ShopTest.cpp.o
+
+tests/ShopTest.i: tests/ShopTest.cpp.i
+.PHONY : tests/ShopTest.i
+
+# target to preprocess a source file
+tests/ShopTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.i
+.PHONY : tests/ShopTest.cpp.i
+
+tests/ShopTest.s: tests/ShopTest.cpp.s
+.PHONY : tests/ShopTest.s
+
+# target to generate assembly for a file
+tests/ShopTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.s
+.PHONY : tests/ShopTest.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -284,6 +308,9 @@ help:
 	@echo "... tests/BasketTest.o"
 	@echo "... tests/BasketTest.i"
 	@echo "... tests/BasketTest.s"
+	@echo "... tests/ShopTest.o"
+	@echo "... tests/ShopTest.i"
+	@echo "... tests/ShopTest.s"
 .PHONY : help
 
 
