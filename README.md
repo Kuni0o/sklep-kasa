@@ -9,6 +9,7 @@ Gotowy do użytku plik wykonywalny aplikacji znajduje się w katalogu:
 `app/appBin/sklep_kasa`
 
 Gotowy do użytku plik z produktami znajduje się w katalogu:
+
 `app/data/products.csv`
 
 ### Uruchomienie aplikacji:
@@ -20,5 +21,12 @@ Gotowy do użytku plik z produktami znajduje się w katalogu:
    ./sklep_kasa
    ```
 ### Dodanie produktów
+W celu dodanie nowego produktu do bazy należy w nowym wierszy pliku products.csv dodać kolejne wartości kolumn:
 
+`unitPrice,code,name,unitType`
+
+* unitPrice- cena za jednostkę
+* code- kod produktu (liczba od 000 do 999)
+* name- nazwa warzywa lub owocu
+* unitType- s (sztuki)/ w (waga)
 
