@@ -578,3 +578,44 @@ events:
       Running the CXX compiler's linker: "/usr/bin/ld" "-v"
       GNU ld (GNU Binutils for Ubuntu) 2.38
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/usr/local/lib/cmake/GTest/GTestConfig.cmake:29 (find_dependency)"
+      - "/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindGTest.cmake:197 (find_package)"
+      - "CMakeLists.txt:7 (find_package)"
+    directories:
+      source: "/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-DHEA4d"
+      binary: "/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-DHEA4d"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-DHEA4d'
+        
+        Run Build Command(s): /snap/clion/310/bin/cmake/linux/x64/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d00ab/fast
+        gmake[1]: Entering directory '/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-DHEA4d'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d00ab.dir/build.make CMakeFiles/cmTC_d00ab.dir/build
+        gmake[2]: Entering directory '/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-DHEA4d'
+        Building C object CMakeFiles/cmTC_d00ab.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_d00ab.dir/src.c.o -c /home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-DHEA4d/src.c
+        Linking C executable cmTC_d00ab
+        /snap/clion/310/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d00ab.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_d00ab.dir/src.c.o -o cmTC_d00ab
+        gmake[2]: Leaving directory '/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-DHEA4d'
+        gmake[1]: Leaving directory '/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-DHEA4d'
+        
+      exitCode: 0
+...

@@ -1,3 +1,4 @@
 /home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles/sklep_kasa.dir
+/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles/test.dir
 /home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles/rebuild_cache.dir

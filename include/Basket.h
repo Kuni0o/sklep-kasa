@@ -25,6 +25,9 @@ public:
     void clearItemsByWeight();
     // Metoda do wyczyszczenia mapy itemsByCount
     void clearItemsByCount();
+    // Gettery
+    std::unordered_map<std::string, double> getItemsByWeight();
+    std::unordered_map<std::string, int> getItemsCount();
 };
 
 #endif // BASKET_H

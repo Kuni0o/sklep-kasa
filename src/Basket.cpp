@@ -2,6 +2,14 @@
 #include <iostream>
 #include <iomanip>
 #include "math.h"
+// Gettery
+std::unordered_map<std::string, double> Basket::getItemsByWeight() {
+    return itemsByWeight;
+}
+
+std::unordered_map<std::string, int> Basket::getItemsCount(){
+    return itemsByCount;
+}
 // Metoda do dodania produktu do koszyka
 bool Basket::addProduct(Product &product, double quantity) {
     double intpart;

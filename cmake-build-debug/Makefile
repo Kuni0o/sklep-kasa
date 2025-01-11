@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-de
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/snap/clion/310/bin/cmake/linux/x64/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
@@ -225,29 +235,29 @@ src/Shop.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/Shop.cpp.s
 .PHONY : src/Shop.cpp.s
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+tests/BasketTest.o: tests/BasketTest.cpp.o
+.PHONY : tests/BasketTest.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+tests/BasketTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.o
+.PHONY : tests/BasketTest.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+tests/BasketTest.i: tests/BasketTest.cpp.i
+.PHONY : tests/BasketTest.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+tests/BasketTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.i
+.PHONY : tests/BasketTest.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+tests/BasketTest.s: tests/BasketTest.cpp.s
+.PHONY : tests/BasketTest.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+tests/BasketTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.s
+.PHONY : tests/BasketTest.cpp.s
 
 # Help Target
 help:
@@ -257,6 +267,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... sklep_kasa"
 	@echo "... src/Basket.o"
 	@echo "... src/Basket.i"
@@ -270,9 +281,9 @@ help:
 	@echo "... src/Shop.o"
 	@echo "... src/Shop.i"
 	@echo "... src/Shop.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... tests/BasketTest.o"
+	@echo "... tests/BasketTest.i"
+	@echo "... tests/BasketTest.s"
 .PHONY : help
 
 
