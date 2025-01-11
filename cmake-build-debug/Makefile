@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-de
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/snap/clion/310/bin/cmake/linux/x64/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
@@ -129,12 +139,26 @@ sklep_kasa/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/build
 .PHONY : sklep_kasa/fast
 
+#=============================================================================
+# Target rules for targets named sklep_kasa_tests
+
+# Build rule for target.
+sklep_kasa_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sklep_kasa_tests
+.PHONY : sklep_kasa_tests
+
+# fast build rule for target.
+sklep_kasa_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/build
+.PHONY : sklep_kasa_tests/fast
+
 src/Basket.o: src/Basket.cpp.o
 .PHONY : src/Basket.o
 
 # target to build an object file
 src/Basket.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/Basket.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/src/Basket.cpp.o
 .PHONY : src/Basket.cpp.o
 
 src/Basket.i: src/Basket.cpp.i
@@ -143,6 +167,7 @@ src/Basket.i: src/Basket.cpp.i
 # target to preprocess a source file
 src/Basket.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/Basket.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/src/Basket.cpp.i
 .PHONY : src/Basket.cpp.i
 
 src/Basket.s: src/Basket.cpp.s
@@ -151,6 +176,7 @@ src/Basket.s: src/Basket.cpp.s
 # target to generate assembly for a file
 src/Basket.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/Basket.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/src/Basket.cpp.s
 .PHONY : src/Basket.cpp.s
 
 src/Data.o: src/Data.cpp.o
@@ -159,6 +185,7 @@ src/Data.o: src/Data.cpp.o
 # target to build an object file
 src/Data.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/Data.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/src/Data.cpp.o
 .PHONY : src/Data.cpp.o
 
 src/Data.i: src/Data.cpp.i
@@ -167,6 +194,7 @@ src/Data.i: src/Data.cpp.i
 # target to preprocess a source file
 src/Data.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/Data.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/src/Data.cpp.i
 .PHONY : src/Data.cpp.i
 
 src/Data.s: src/Data.cpp.s
@@ -175,6 +203,7 @@ src/Data.s: src/Data.cpp.s
 # target to generate assembly for a file
 src/Data.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/Data.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/src/Data.cpp.s
 .PHONY : src/Data.cpp.s
 
 src/Product.o: src/Product.cpp.o
@@ -183,6 +212,7 @@ src/Product.o: src/Product.cpp.o
 # target to build an object file
 src/Product.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/Product.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/src/Product.cpp.o
 .PHONY : src/Product.cpp.o
 
 src/Product.i: src/Product.cpp.i
@@ -191,6 +221,7 @@ src/Product.i: src/Product.cpp.i
 # target to preprocess a source file
 src/Product.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/Product.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/src/Product.cpp.i
 .PHONY : src/Product.cpp.i
 
 src/Product.s: src/Product.cpp.s
@@ -199,6 +230,7 @@ src/Product.s: src/Product.cpp.s
 # target to generate assembly for a file
 src/Product.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/Product.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/src/Product.cpp.s
 .PHONY : src/Product.cpp.s
 
 src/Shop.o: src/Shop.cpp.o
@@ -207,6 +239,7 @@ src/Shop.o: src/Shop.cpp.o
 # target to build an object file
 src/Shop.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/Shop.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/src/Shop.cpp.o
 .PHONY : src/Shop.cpp.o
 
 src/Shop.i: src/Shop.cpp.i
@@ -215,6 +248,7 @@ src/Shop.i: src/Shop.cpp.i
 # target to preprocess a source file
 src/Shop.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/Shop.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/src/Shop.cpp.i
 .PHONY : src/Shop.cpp.i
 
 src/Shop.s: src/Shop.cpp.s
@@ -223,6 +257,7 @@ src/Shop.s: src/Shop.cpp.s
 # target to generate assembly for a file
 src/Shop.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/Shop.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/src/Shop.cpp.s
 .PHONY : src/Shop.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -249,6 +284,78 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+tests/BasketTest.o: tests/BasketTest.cpp.o
+.PHONY : tests/BasketTest.o
+
+# target to build an object file
+tests/BasketTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/tests/BasketTest.cpp.o
+.PHONY : tests/BasketTest.cpp.o
+
+tests/BasketTest.i: tests/BasketTest.cpp.i
+.PHONY : tests/BasketTest.i
+
+# target to preprocess a source file
+tests/BasketTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/tests/BasketTest.cpp.i
+.PHONY : tests/BasketTest.cpp.i
+
+tests/BasketTest.s: tests/BasketTest.cpp.s
+.PHONY : tests/BasketTest.s
+
+# target to generate assembly for a file
+tests/BasketTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/tests/BasketTest.cpp.s
+.PHONY : tests/BasketTest.cpp.s
+
+tests/DataTest.o: tests/DataTest.cpp.o
+.PHONY : tests/DataTest.o
+
+# target to build an object file
+tests/DataTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/tests/DataTest.cpp.o
+.PHONY : tests/DataTest.cpp.o
+
+tests/DataTest.i: tests/DataTest.cpp.i
+.PHONY : tests/DataTest.i
+
+# target to preprocess a source file
+tests/DataTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/tests/DataTest.cpp.i
+.PHONY : tests/DataTest.cpp.i
+
+tests/DataTest.s: tests/DataTest.cpp.s
+.PHONY : tests/DataTest.s
+
+# target to generate assembly for a file
+tests/DataTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/tests/DataTest.cpp.s
+.PHONY : tests/DataTest.cpp.s
+
+tests/ShopTest.o: tests/ShopTest.cpp.o
+.PHONY : tests/ShopTest.o
+
+# target to build an object file
+tests/ShopTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/tests/ShopTest.cpp.o
+.PHONY : tests/ShopTest.cpp.o
+
+tests/ShopTest.i: tests/ShopTest.cpp.i
+.PHONY : tests/ShopTest.i
+
+# target to preprocess a source file
+tests/ShopTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/tests/ShopTest.cpp.i
+.PHONY : tests/ShopTest.cpp.i
+
+tests/ShopTest.s: tests/ShopTest.cpp.s
+.PHONY : tests/ShopTest.s
+
+# target to generate assembly for a file
+tests/ShopTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/tests/ShopTest.cpp.s
+.PHONY : tests/ShopTest.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -257,7 +364,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... sklep_kasa"
+	@echo "... sklep_kasa_tests"
 	@echo "... src/Basket.o"
 	@echo "... src/Basket.i"
 	@echo "... src/Basket.s"
@@ -273,6 +382,15 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... tests/BasketTest.o"
+	@echo "... tests/BasketTest.i"
+	@echo "... tests/BasketTest.s"
+	@echo "... tests/DataTest.o"
+	@echo "... tests/DataTest.i"
+	@echo "... tests/DataTest.s"
+	@echo "... tests/ShopTest.o"
+	@echo "... tests/ShopTest.i"
+	@echo "... tests/ShopTest.s"
 .PHONY : help
 
 

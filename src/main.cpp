@@ -50,9 +50,9 @@ int main() {
                     // Dodanie produktu do koszyka
                     if(basket.addProduct(product, quantity)){
                         std::cout << "Produkt dodany do koszyka.";
+                        found = true;
                         break;
                     }
-                    found = true;
                 }
             }
             if(!found){
@@ -75,11 +75,11 @@ int main() {
             for (auto& product : products) {
                 if (product.getCode() == code) {
                     // Usuniecie produktu z koszyka
-                    if(basket.removeProduct(product, quantity)){
+                    if(basket.removeProduct(product, quantity)) {
                         std::cout << "Produkt usuniety z koszyka.";
+                        found = true;
                         break;
                     }
-                    found = true;
                 }
             }
             if(!found){

@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "sklep_kasa",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -39,8 +41,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "sklep_kasa::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-sklep_kasa-Debug-251f6d03fede3536557b.json",
+					"jsonFile" : "target-sklep_kasa-Debug-7734b398a67d5290e1f1.json",
 					"name" : "sklep_kasa",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sklep_kasa_tests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sklep_kasa_tests-Debug-9492d89b09c5ac237d6e.json",
+					"name" : "sklep_kasa_tests",
 					"projectIndex" : 0
 				}
 			]

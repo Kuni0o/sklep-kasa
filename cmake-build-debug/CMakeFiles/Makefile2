@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-de
 
 # The main recursive "all" target.
 all: CMakeFiles/sklep_kasa.dir/all
+all: CMakeFiles/sklep_kasa_tests.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +73,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/sklep_kasa.dir/clean
+clean: CMakeFiles/sklep_kasa_tests.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -99,6 +101,32 @@ sklep_kasa: CMakeFiles/sklep_kasa.dir/rule
 CMakeFiles/sklep_kasa.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/clean
 .PHONY : CMakeFiles/sklep_kasa.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/sklep_kasa_tests.dir
+
+# All Build rule for target.
+CMakeFiles/sklep_kasa_tests.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles --progress-num=7,8,9,10,11,12,13,14 "Built target sklep_kasa_tests"
+.PHONY : CMakeFiles/sklep_kasa_tests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/sklep_kasa_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sklep_kasa_tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/sklep_kasa_tests.dir/rule
+
+# Convenience name for target.
+sklep_kasa_tests: CMakeFiles/sklep_kasa_tests.dir/rule
+.PHONY : sklep_kasa_tests
+
+# clean rule for target.
+CMakeFiles/sklep_kasa_tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa_tests.dir/build.make CMakeFiles/sklep_kasa_tests.dir/clean
+.PHONY : CMakeFiles/sklep_kasa_tests.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
