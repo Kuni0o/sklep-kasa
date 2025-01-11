@@ -15,7 +15,7 @@ Gotowy do użytku plik z produktami znajduje się w katalogu:
 ### Uruchomienie aplikacji:
 1. Skopiuj cały folder `app` w wybrane miejsce na swoim dysku.
 2. Otwórz terminal i przejdź do katalogu `app/appBin`.
-3. Ustaw uprawnienia do uruchomienia za pomocą komendy:
+3. Ustaw uprawnienia do uruchomienia i uruchom aplikację za pomocą komend:
    ```bash
    chmod +x sklep_kasa
    ./sklep_kasa
@@ -30,3 +30,30 @@ W celu dodanie nowego produktu do bazy należy w nowym wierszy pliku products.cs
 * name- nazwa warzywa lub owocu
 * unitType- s (sztuki)/ w (waga)
 
+## Testy jednostkowe
+
+Testy jednostkowe zostały zaimplementowane przy użyciu frameworka Google Test. Plik wykonywalny testów znajduje się w katalogu:
+
+`cmake-build-debug/sklep_kasa_tests`
+
+### Uruchomienie testów:
+1. Otwórz terminal i przejdź do katalogu `cmake-build-debug`
+2. Ustaw uprawnienia do uruchomienia i uruchom testy za pomocą komend:
+   ```bash
+   chmod +x sklep_kasa_tests
+   ./sklep_kasa_tests
+   ```
+
+## Instrukcja obsługi
+### Uruchomienie aplikacji
+Po uruchomieniu aplikacji wyświetli się następujące menu
+   ```bash
+   -----KASA SKLEPU WARZYWNO-OWOCOWEGO-----
+   1. Wyswietl liste owocow i warzyw
+   2. Dodaj produkt do koszyka
+   3. Usun produkt z koszyka
+   4. Wyswietl zawartosc koszyka
+   5. Oblicz sume zakupow
+   6. Zakoncz
+   Wybierz opcje:
+   ```
