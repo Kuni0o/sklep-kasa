@@ -817,7 +817,9 @@ CMakeFiles/sklep_kasa.dir/src/Shop.cpp.o: /home/cyprian/CLionProjects/zadanko/sk
 
 CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.o: /home/cyprian/CLionProjects/zadanko/sklep-kasa/tests/BasketTest.cpp \
   /home/cyprian/CLionProjects/zadanko/sklep-kasa/include/Basket.h \
+  /home/cyprian/CLionProjects/zadanko/sklep-kasa/include/Data.h \
   /home/cyprian/CLionProjects/zadanko/sklep-kasa/include/Product.h \
+  /home/cyprian/CLionProjects/zadanko/sklep-kasa/include/Shop.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -855,6 +857,7 @@ CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.o: /home/cyprian/CLionProjects/za
   /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/exception_defines.h \
   /usr/include/c++/11/bits/exception_ptr.h \
+  /usr/include/c++/11/bits/fstream.tcc \
   /usr/include/c++/11/bits/functexcept.h \
   /usr/include/c++/11/bits/functional_hash.h \
   /usr/include/c++/11/bits/hash_bytes.h \
@@ -943,6 +946,7 @@ CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.o: /home/cyprian/CLionProjects/za
   /usr/include/c++/11/ext/numeric_traits.h \
   /usr/include/c++/11/ext/string_conversions.h \
   /usr/include/c++/11/ext/type_traits.h \
+  /usr/include/c++/11/fstream \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/initializer_list \
   /usr/include/c++/11/iomanip \
@@ -1101,8 +1105,10 @@ CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.o: /home/cyprian/CLionProjects/za
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \

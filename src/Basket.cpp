@@ -7,68 +7,76 @@ std::unordered_map<std::string, double> Basket::getItemsByWeight() {
     return itemsByWeight;
 }
 
-std::unordered_map<std::string, int> Basket::getItemsCount(){
+std::unordered_map<std::string, int> Basket::getItemsByCount(){
     return itemsByCount;
 }
 // Metoda do dodania produktu do koszyka
 bool Basket::addProduct(Product &product, double quantity) {
     double intpart;
-    if(product.getUnitType() == "w"){
-        // Dodanie produktu do koszyka
-        if (itemsByWeight.find(product.getCode()) != itemsByWeight.end()) {
-            itemsByWeight[product.getCode()] += quantity; // Zwiekszenie istniejccej ilosci
-        } else {
-            itemsByWeight[product.getCode()] = quantity; // Dodanie nowego produktu
-        }
-        return true;
-    }else if(product.getUnitType() == "s"){
-        if(modf(quantity, &intpart) == 0){
+    if(quantity >= 0){
+        if(product.getUnitType() == "w"){
             // Dodanie produktu do koszyka
-            if (itemsByCount.find(product.getCode()) != itemsByCount.end()) {
-                itemsByCount[product.getCode()] += quantity; // Zwiekszenie istniejacej ilosci
+            if (itemsByWeight.find(product.getCode()) != itemsByWeight.end()) {
+                itemsByWeight[product.getCode()] += quantity; // Zwiekszenie istniejccej ilosci
             } else {
-                itemsByCount[product.getCode()] = quantity; // Dodanie nowego produktu
+                itemsByWeight[product.getCode()] = quantity; // Dodanie nowego produktu
             }
             return true;
-        }else{
-            std::cout << "Nie udalo sie dodac produktu. Sztuki musza byc liczba calkowita dodatnia.";
+        }else if(product.getUnitType() == "s"){
+            if(modf(quantity, &intpart) == 0){
+                // Dodanie produktu do koszyka
+                if (itemsByCount.find(product.getCode()) != itemsByCount.end()) {
+                    itemsByCount[product.getCode()] += quantity; // Zwiekszenie istniejacej ilosci
+                } else {
+                    itemsByCount[product.getCode()] = quantity; // Dodanie nowego produktu
+                }
+                return true;
+            }else{
+                std::cout << "Nie udalo sie dodac produktu. Sztuki musza byc liczba calkowita nieujemna.";
+            }
         }
+    }else{
+        std::cout << "Ilosc musi byc nieujemna.";
     }
     return false;
 }
 // Metoda do usuniecie produktu z koszyka
 bool Basket::removeProduct(Product &product, double quantity) {
     double intpart;
-    if(product.getUnitType() == "w"){ // Waga
-        // Usuniecie produktu z koszyka
-        if (itemsByWeight.find(product.getCode()) != itemsByWeight.end()) {
-            if(itemsByWeight[product.getCode()] == quantity){
-                itemsByWeight.erase(product.getCode()); // Usuniecie produktu z koszyka
-                return true;
-            }else if(itemsByWeight[product.getCode()] < quantity){
-                std::cout << "Ilosc do usuniecia przekracza, ilosc w koszyku.";
-            }else{
-                itemsByWeight[product.getCode()] -= quantity; // Zmniejszenie ilosci z koszyka
-                return true;
-            }
-        }
-    }else if(product.getUnitType() == "s"){ // Sztuki
-        if(modf(quantity, &intpart) == 0){
+    if(quantity >= 0){
+        if(product.getUnitType() == "w"){ // Waga
             // Usuniecie produktu z koszyka
-            if (itemsByCount.find(product.getCode()) != itemsByCount.end()) {
-                if(itemsByCount[product.getCode()] == quantity){
-                    itemsByCount.erase(product.getCode()); // Usuniecie produktu z koszyka
+            if (itemsByWeight.find(product.getCode()) != itemsByWeight.end()) {
+                if(itemsByWeight[product.getCode()] == quantity){
+                    itemsByWeight.erase(product.getCode()); // Usuniecie produktu z koszyka
                     return true;
-                }else if(itemsByCount[product.getCode()] < quantity){
+                }else if(itemsByWeight[product.getCode()] < quantity){
                     std::cout << "Ilosc do usuniecia przekracza, ilosc w koszyku.";
                 }else{
-                    itemsByCount[product.getCode()] -= quantity; // Zmniejszenie ilosci z koszyka
+                    itemsByWeight[product.getCode()] -= quantity; // Zmniejszenie ilosci z koszyka
                     return true;
                 }
             }
-        }else{
-            std::cout << "Nie udalo sie usunac produktu. Sztuki musza byc liczba calkowita dodatnia.";
+        }else if(product.getUnitType() == "s"){ // Sztuki
+            if(modf(quantity, &intpart) == 0){
+                // Usuniecie produktu z koszyka
+                if (itemsByCount.find(product.getCode()) != itemsByCount.end()) {
+                    if(itemsByCount[product.getCode()] == quantity){
+                        itemsByCount.erase(product.getCode()); // Usuniecie produktu z koszyka
+                        return true;
+                    }else if(itemsByCount[product.getCode()] < quantity){
+                        std::cout << "Ilosc do usuniecia przekracza, ilosc w koszyku.";
+                    }else{
+                        itemsByCount[product.getCode()] -= quantity; // Zmniejszenie ilosci z koszyka
+                        return true;
+                    }
+                }
+            }else{
+                std::cout << "Nie udalo sie usunac produktu. Sztuki musza byc liczba calkowita dodatnia.";
+            }
         }
+    }else{
+        std::cout << "Ilosc musi byc nieujemna.";
     }
     return false;
 }

@@ -267,5 +267,4 @@ CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.o: \
  /usr/local/include/gtest/gtest-typed-test.h \
  /usr/local/include/gtest/gtest_pred_impl.h \
  /home/cyprian/CLionProjects/zadanko/sklep-kasa/tests/../include/Basket.h \
- /home/cyprian/CLionProjects/zadanko/sklep-kasa/tests/../include/Product.h \
  /home/cyprian/CLionProjects/zadanko/sklep-kasa/tests/../include/Product.h

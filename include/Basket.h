@@ -27,7 +27,7 @@ public:
     void clearItemsByCount();
     // Gettery
     std::unordered_map<std::string, double> getItemsByWeight();
-    std::unordered_map<std::string, int> getItemsCount();
+    std::unordered_map<std::string, int> getItemsByCount();
 };
 
 #endif // BASKET_H
