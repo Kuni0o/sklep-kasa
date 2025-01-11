@@ -12,9 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/cyprian/CLionProjects/zadanko/sklep-kasa/src/Data.cpp" "CMakeFiles/sklep_kasa.dir/src/Data.cpp.o" "gcc" "CMakeFiles/sklep_kasa.dir/src/Data.cpp.o.d"
   "/home/cyprian/CLionProjects/zadanko/sklep-kasa/src/Product.cpp" "CMakeFiles/sklep_kasa.dir/src/Product.cpp.o" "gcc" "CMakeFiles/sklep_kasa.dir/src/Product.cpp.o.d"
   "/home/cyprian/CLionProjects/zadanko/sklep-kasa/src/Shop.cpp" "CMakeFiles/sklep_kasa.dir/src/Shop.cpp.o" "gcc" "CMakeFiles/sklep_kasa.dir/src/Shop.cpp.o.d"
-  "/home/cyprian/CLionProjects/zadanko/sklep-kasa/tests/BasketTest.cpp" "CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.o" "gcc" "CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.o.d"
-  "/home/cyprian/CLionProjects/zadanko/sklep-kasa/tests/DataTest.cpp" "CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.o" "gcc" "CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.o.d"
-  "/home/cyprian/CLionProjects/zadanko/sklep-kasa/tests/ShopTest.cpp" "CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.o" "gcc" "CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.o.d"
+  "/home/cyprian/CLionProjects/zadanko/sklep-kasa/src/main.cpp" "CMakeFiles/sklep_kasa.dir/src/main.cpp.o" "gcc" "CMakeFiles/sklep_kasa.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

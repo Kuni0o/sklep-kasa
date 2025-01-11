@@ -69,10 +69,24 @@ include CMakeFiles/sklep_kasa.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/sklep_kasa.dir/flags.make
 
+CMakeFiles/sklep_kasa.dir/src/main.cpp.o: CMakeFiles/sklep_kasa.dir/flags.make
+CMakeFiles/sklep_kasa.dir/src/main.cpp.o: /home/cyprian/CLionProjects/zadanko/sklep-kasa/src/main.cpp
+CMakeFiles/sklep_kasa.dir/src/main.cpp.o: CMakeFiles/sklep_kasa.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sklep_kasa.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sklep_kasa.dir/src/main.cpp.o -MF CMakeFiles/sklep_kasa.dir/src/main.cpp.o.d -o CMakeFiles/sklep_kasa.dir/src/main.cpp.o -c /home/cyprian/CLionProjects/zadanko/sklep-kasa/src/main.cpp
+
+CMakeFiles/sklep_kasa.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sklep_kasa.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cyprian/CLionProjects/zadanko/sklep-kasa/src/main.cpp > CMakeFiles/sklep_kasa.dir/src/main.cpp.i
+
+CMakeFiles/sklep_kasa.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sklep_kasa.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cyprian/CLionProjects/zadanko/sklep-kasa/src/main.cpp -o CMakeFiles/sklep_kasa.dir/src/main.cpp.s
+
 CMakeFiles/sklep_kasa.dir/src/Product.cpp.o: CMakeFiles/sklep_kasa.dir/flags.make
 CMakeFiles/sklep_kasa.dir/src/Product.cpp.o: /home/cyprian/CLionProjects/zadanko/sklep-kasa/src/Product.cpp
 CMakeFiles/sklep_kasa.dir/src/Product.cpp.o: CMakeFiles/sklep_kasa.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sklep_kasa.dir/src/Product.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sklep_kasa.dir/src/Product.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sklep_kasa.dir/src/Product.cpp.o -MF CMakeFiles/sklep_kasa.dir/src/Product.cpp.o.d -o CMakeFiles/sklep_kasa.dir/src/Product.cpp.o -c /home/cyprian/CLionProjects/zadanko/sklep-kasa/src/Product.cpp
 
 CMakeFiles/sklep_kasa.dir/src/Product.cpp.i: cmake_force
@@ -86,7 +100,7 @@ CMakeFiles/sklep_kasa.dir/src/Product.cpp.s: cmake_force
 CMakeFiles/sklep_kasa.dir/src/Data.cpp.o: CMakeFiles/sklep_kasa.dir/flags.make
 CMakeFiles/sklep_kasa.dir/src/Data.cpp.o: /home/cyprian/CLionProjects/zadanko/sklep-kasa/src/Data.cpp
 CMakeFiles/sklep_kasa.dir/src/Data.cpp.o: CMakeFiles/sklep_kasa.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sklep_kasa.dir/src/Data.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sklep_kasa.dir/src/Data.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sklep_kasa.dir/src/Data.cpp.o -MF CMakeFiles/sklep_kasa.dir/src/Data.cpp.o.d -o CMakeFiles/sklep_kasa.dir/src/Data.cpp.o -c /home/cyprian/CLionProjects/zadanko/sklep-kasa/src/Data.cpp
 
 CMakeFiles/sklep_kasa.dir/src/Data.cpp.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/sklep_kasa.dir/src/Data.cpp.s: cmake_force
 CMakeFiles/sklep_kasa.dir/src/Shop.cpp.o: CMakeFiles/sklep_kasa.dir/flags.make
 CMakeFiles/sklep_kasa.dir/src/Shop.cpp.o: /home/cyprian/CLionProjects/zadanko/sklep-kasa/src/Shop.cpp
 CMakeFiles/sklep_kasa.dir/src/Shop.cpp.o: CMakeFiles/sklep_kasa.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sklep_kasa.dir/src/Shop.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sklep_kasa.dir/src/Shop.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sklep_kasa.dir/src/Shop.cpp.o -MF CMakeFiles/sklep_kasa.dir/src/Shop.cpp.o.d -o CMakeFiles/sklep_kasa.dir/src/Shop.cpp.o -c /home/cyprian/CLionProjects/zadanko/sklep-kasa/src/Shop.cpp
 
 CMakeFiles/sklep_kasa.dir/src/Shop.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/sklep_kasa.dir/src/Shop.cpp.s: cmake_force
 CMakeFiles/sklep_kasa.dir/src/Basket.cpp.o: CMakeFiles/sklep_kasa.dir/flags.make
 CMakeFiles/sklep_kasa.dir/src/Basket.cpp.o: /home/cyprian/CLionProjects/zadanko/sklep-kasa/src/Basket.cpp
 CMakeFiles/sklep_kasa.dir/src/Basket.cpp.o: CMakeFiles/sklep_kasa.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sklep_kasa.dir/src/Basket.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sklep_kasa.dir/src/Basket.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sklep_kasa.dir/src/Basket.cpp.o -MF CMakeFiles/sklep_kasa.dir/src/Basket.cpp.o.d -o CMakeFiles/sklep_kasa.dir/src/Basket.cpp.o -c /home/cyprian/CLionProjects/zadanko/sklep-kasa/src/Basket.cpp
 
 CMakeFiles/sklep_kasa.dir/src/Basket.cpp.i: cmake_force
@@ -125,73 +139,25 @@ CMakeFiles/sklep_kasa.dir/src/Basket.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sklep_kasa.dir/src/Basket.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cyprian/CLionProjects/zadanko/sklep-kasa/src/Basket.cpp -o CMakeFiles/sklep_kasa.dir/src/Basket.cpp.s
 
-CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.o: CMakeFiles/sklep_kasa.dir/flags.make
-CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.o: /home/cyprian/CLionProjects/zadanko/sklep-kasa/tests/BasketTest.cpp
-CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.o: CMakeFiles/sklep_kasa.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.o -MF CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.o.d -o CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.o -c /home/cyprian/CLionProjects/zadanko/sklep-kasa/tests/BasketTest.cpp
-
-CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cyprian/CLionProjects/zadanko/sklep-kasa/tests/BasketTest.cpp > CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.i
-
-CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cyprian/CLionProjects/zadanko/sklep-kasa/tests/BasketTest.cpp -o CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.s
-
-CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.o: CMakeFiles/sklep_kasa.dir/flags.make
-CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.o: /home/cyprian/CLionProjects/zadanko/sklep-kasa/tests/ShopTest.cpp
-CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.o: CMakeFiles/sklep_kasa.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.o -MF CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.o.d -o CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.o -c /home/cyprian/CLionProjects/zadanko/sklep-kasa/tests/ShopTest.cpp
-
-CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cyprian/CLionProjects/zadanko/sklep-kasa/tests/ShopTest.cpp > CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.i
-
-CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cyprian/CLionProjects/zadanko/sklep-kasa/tests/ShopTest.cpp -o CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.s
-
-CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.o: CMakeFiles/sklep_kasa.dir/flags.make
-CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.o: /home/cyprian/CLionProjects/zadanko/sklep-kasa/tests/DataTest.cpp
-CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.o: CMakeFiles/sklep_kasa.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.o -MF CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.o.d -o CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.o -c /home/cyprian/CLionProjects/zadanko/sklep-kasa/tests/DataTest.cpp
-
-CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cyprian/CLionProjects/zadanko/sklep-kasa/tests/DataTest.cpp > CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.i
-
-CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cyprian/CLionProjects/zadanko/sklep-kasa/tests/DataTest.cpp -o CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.s
-
 # Object files for target sklep_kasa
 sklep_kasa_OBJECTS = \
+"CMakeFiles/sklep_kasa.dir/src/main.cpp.o" \
 "CMakeFiles/sklep_kasa.dir/src/Product.cpp.o" \
 "CMakeFiles/sklep_kasa.dir/src/Data.cpp.o" \
 "CMakeFiles/sklep_kasa.dir/src/Shop.cpp.o" \
-"CMakeFiles/sklep_kasa.dir/src/Basket.cpp.o" \
-"CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.o" \
-"CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.o" \
-"CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.o"
+"CMakeFiles/sklep_kasa.dir/src/Basket.cpp.o"
 
 # External object files for target sklep_kasa
 sklep_kasa_EXTERNAL_OBJECTS =
 
+sklep_kasa: CMakeFiles/sklep_kasa.dir/src/main.cpp.o
 sklep_kasa: CMakeFiles/sklep_kasa.dir/src/Product.cpp.o
 sklep_kasa: CMakeFiles/sklep_kasa.dir/src/Data.cpp.o
 sklep_kasa: CMakeFiles/sklep_kasa.dir/src/Shop.cpp.o
 sklep_kasa: CMakeFiles/sklep_kasa.dir/src/Basket.cpp.o
-sklep_kasa: CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.o
-sklep_kasa: CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.o
-sklep_kasa: CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.o
 sklep_kasa: CMakeFiles/sklep_kasa.dir/build.make
-sklep_kasa: /usr/local/lib/libgtest_main.a
-sklep_kasa: /usr/local/lib/libgtest.a
 sklep_kasa: CMakeFiles/sklep_kasa.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable sklep_kasa"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable sklep_kasa"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sklep_kasa.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

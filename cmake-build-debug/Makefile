@@ -65,16 +65,6 @@ CMAKE_BINARY_DIR = /home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-de
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
-	/snap/clion/310/bin/cmake/linux/x64/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-.PHONY : test/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
@@ -235,77 +225,29 @@ src/Shop.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/Shop.cpp.s
 .PHONY : src/Shop.cpp.s
 
-tests/BasketTest.o: tests/BasketTest.cpp.o
-.PHONY : tests/BasketTest.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-tests/BasketTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.o
-.PHONY : tests/BasketTest.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-tests/BasketTest.i: tests/BasketTest.cpp.i
-.PHONY : tests/BasketTest.i
-
-# target to preprocess a source file
-tests/BasketTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.i
-.PHONY : tests/BasketTest.cpp.i
-
-tests/BasketTest.s: tests/BasketTest.cpp.s
-.PHONY : tests/BasketTest.s
-
-# target to generate assembly for a file
-tests/BasketTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.s
-.PHONY : tests/BasketTest.cpp.s
-
-tests/DataTest.o: tests/DataTest.cpp.o
-.PHONY : tests/DataTest.o
-
-# target to build an object file
-tests/DataTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.o
-.PHONY : tests/DataTest.cpp.o
-
-tests/DataTest.i: tests/DataTest.cpp.i
-.PHONY : tests/DataTest.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-tests/DataTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.i
-.PHONY : tests/DataTest.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-tests/DataTest.s: tests/DataTest.cpp.s
-.PHONY : tests/DataTest.s
-
-# target to generate assembly for a file
-tests/DataTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.s
-.PHONY : tests/DataTest.cpp.s
-
-tests/ShopTest.o: tests/ShopTest.cpp.o
-.PHONY : tests/ShopTest.o
-
-# target to build an object file
-tests/ShopTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.o
-.PHONY : tests/ShopTest.cpp.o
-
-tests/ShopTest.i: tests/ShopTest.cpp.i
-.PHONY : tests/ShopTest.i
-
-# target to preprocess a source file
-tests/ShopTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.i
-.PHONY : tests/ShopTest.cpp.i
-
-tests/ShopTest.s: tests/ShopTest.cpp.s
-.PHONY : tests/ShopTest.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-tests/ShopTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/ShopTest.cpp.s
-.PHONY : tests/ShopTest.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -315,7 +257,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test"
 	@echo "... sklep_kasa"
 	@echo "... src/Basket.o"
 	@echo "... src/Basket.i"
@@ -329,15 +270,9 @@ help:
 	@echo "... src/Shop.o"
 	@echo "... src/Shop.i"
 	@echo "... src/Shop.s"
-	@echo "... tests/BasketTest.o"
-	@echo "... tests/BasketTest.i"
-	@echo "... tests/BasketTest.s"
-	@echo "... tests/DataTest.o"
-	@echo "... tests/DataTest.i"
-	@echo "... tests/DataTest.s"
-	@echo "... tests/ShopTest.o"
-	@echo "... tests/ShopTest.i"
-	@echo "... tests/ShopTest.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 
