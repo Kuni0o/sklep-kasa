@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.26"
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "sklep_kasa::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-sklep_kasa-Debug-5758db73ccbeb5b95f8a.json",
+					"jsonFile" : "target-sklep_kasa-Debug-45ab7bead4c4d7120584.json",
 					"name" : "sklep_kasa",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/ckuni/Desktop/zadanie/sklep-kasa/cmake-build-debug",
-		"source" : "C:/Users/ckuni/Desktop/zadanie/sklep-kasa"
+		"build" : "/home/cyprian/CLionProjects/zadanko/sklep-kasa/cmake-build-debug",
+		"source" : "/home/cyprian/CLionProjects/zadanko/sklep-kasa"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 5
+		"minor" : 7
 	}
 }

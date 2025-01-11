@@ -1,1 +1,2 @@
 # sklep-kasa
+test

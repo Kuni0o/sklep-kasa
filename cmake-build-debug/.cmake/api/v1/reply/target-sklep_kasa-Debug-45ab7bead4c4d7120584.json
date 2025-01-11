@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "sklep_kasa.exe"
-		},
-		{
-			"path" : "sklep_kasa.pdb"
+			"path" : "sklep_kasa"
 		}
 	],
 	"backtrace" : 1,
@@ -72,16 +69,12 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "sklep_kasa",
-	"nameOnDisk" : "sklep_kasa.exe",
+	"nameOnDisk" : "sklep_kasa",
 	"paths" : 
 	{
 		"build" : ".",

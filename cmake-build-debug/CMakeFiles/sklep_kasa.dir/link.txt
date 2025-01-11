@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/sklep_kasa.dir/src/main.cpp.o CMakeFiles/sklep_kasa.dir/src/Product.cpp.o CMakeFiles/sklep_kasa.dir/src/Data.cpp.o CMakeFiles/sklep_kasa.dir/src/Shop.cpp.o CMakeFiles/sklep_kasa.dir/src/Basket.cpp.o -o sklep_kasa
