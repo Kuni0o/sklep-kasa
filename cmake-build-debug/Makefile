@@ -259,6 +259,30 @@ tests/BasketTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/BasketTest.cpp.s
 .PHONY : tests/BasketTest.cpp.s
 
+tests/DataTest.o: tests/DataTest.cpp.o
+.PHONY : tests/DataTest.o
+
+# target to build an object file
+tests/DataTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.o
+.PHONY : tests/DataTest.cpp.o
+
+tests/DataTest.i: tests/DataTest.cpp.i
+.PHONY : tests/DataTest.i
+
+# target to preprocess a source file
+tests/DataTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.i
+.PHONY : tests/DataTest.cpp.i
+
+tests/DataTest.s: tests/DataTest.cpp.s
+.PHONY : tests/DataTest.s
+
+# target to generate assembly for a file
+tests/DataTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sklep_kasa.dir/build.make CMakeFiles/sklep_kasa.dir/tests/DataTest.cpp.s
+.PHONY : tests/DataTest.cpp.s
+
 tests/ShopTest.o: tests/ShopTest.cpp.o
 .PHONY : tests/ShopTest.o
 
@@ -308,6 +332,9 @@ help:
 	@echo "... tests/BasketTest.o"
 	@echo "... tests/BasketTest.i"
 	@echo "... tests/BasketTest.s"
+	@echo "... tests/DataTest.o"
+	@echo "... tests/DataTest.i"
+	@echo "... tests/DataTest.s"
 	@echo "... tests/ShopTest.o"
 	@echo "... tests/ShopTest.i"
 	@echo "... tests/ShopTest.s"
