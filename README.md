@@ -1,2 +1,2 @@
-# sklep-kasa
-test
+# Kasa sklepu warzywno-owocowego
+## Instrukcja obsługi
