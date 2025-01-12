@@ -72,7 +72,7 @@ Po uruchomieniu aplikacji wyświetli się następujące menu
 Wyświetla zawartość pliku z produktami w celu łatwego przypomnienia kodów produktów.
 
 ### Opcja 2
-Pozwala dodać produkt do koszyka poprzez podanie kodu produktu oraz ilośc.
+Pozwala dodać produkt do koszyka poprzez podanie kodu produktu oraz ilości.
 
 ### Opcja 3
 Pozwala usunąć produkt w całości lub jego część z koszyka poprzez podanie kodu i ilości.
