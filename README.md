@@ -26,7 +26,7 @@ W celu dodanie nowego produktu do bazy należy w nowym wierszy pliku products.cs
 `unitPrice,code,name,unitType`
 
 * unitPrice- cena za jednostkę
-* code- kod produktu (liczba od 000 do 999)
+* code- kod produktu
 * name- nazwa warzywa lub owocu
 * unitType- s (sztuki)/ w (waga)
 
@@ -47,7 +47,7 @@ Testy jednostkowe zostały zaimplementowane przy użyciu frameworka Google Test.
 ## Instrukcja obsługi
 ### Uruchomienie aplikacji
 Po uruchomieniu aplikacji wyświetli się następujące menu
-   ```bash
+   ```
    -----KASA SKLEPU WARZYWNO-OWOCOWEGO-----
    1. Wyswietl liste owocow i warzyw
    2. Dodaj produkt do koszyka
@@ -57,3 +57,20 @@ Po uruchomieniu aplikacji wyświetli się następujące menu
    6. Zakoncz
    Wybierz opcje:
    ```
+### Opcja 1
+Wyświetla zawartość pliku z produktami w celu łatwego przypomnienia kodów produktów.
+
+### Opcja 2
+Pozwala dodać produkt do koszyka poprzez podanie kodu produktu oraz ilośc.
+
+### Opcja 3
+Pozwala usunąć produkt w całości lub jego część z koszyka poprzez podanie kodu i ilości.
+
+### Opcja 4 
+Wyświetla aktualną zawartość koszyka z produktami.
+
+### Opcja 5
+Wyświetla podsumowanie produktów razem z ceną końcową, jeżeli wszystko się zgadza i zatwierdzimy je koszyk oraz zmienną z ceną zostaną wyczyszczone.
+
+### Opcja 6
+Przerywa wykonywanie pętli programu przez co kończy jego działanie.
