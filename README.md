@@ -44,6 +44,16 @@ Testy jednostkowe zostały zaimplementowane przy użyciu frameworka Google Test.
    ./sklep_kasa_tests
    ```
 
+## Odczyt wagi z urządzenia   
+Dodanie funkcjonalności odczytu wagi z urządzenia zewnętrznego jest stosunkowo proste, ponieważ obecna architektura aplikacji wspiera podział produktów na dwie kategorie: na sztuki (`s`) i na wagę (`w`).
+
+Metoda `Basket::addProduct` już obsługuje oba te przypadki, dzięki czemu dodanie obsługi urządzenia wymaga jedynie zaimplementowania logiki odpowiedzialnej za odczyt danych z urządzenia i przekazanie odpowiedniej wartości do metody `addProduct`.
+
+Zmiany ograniczają się głównie do:
+
+* Zastąpienia obecnego odczytu wagi z klawiatury (`std::cin`) logiką odczytu danych z urządzenia.
+Dzięki temu istniejąca struktura kodu, w tym walidacja ilości oraz obsługa koszyka, nie wymaga modyfikacji.
+
 ## Instrukcja obsługi
 ### Uruchomienie aplikacji
 Po uruchomieniu aplikacji wyświetli się następujące menu
@@ -70,7 +80,7 @@ Pozwala usunąć produkt w całości lub jego część z koszyka poprzez podanie
 Wyświetla aktualną zawartość koszyka z produktami.
 
 ### Opcja 5
-Wyświetla podsumowanie produktów razem z ceną końcową, jeżeli wszystko się zgadza i zatwierdzimy je koszyk oraz zmienną z ceną zostaną wyczyszczone.
+Wyświetla podsumowanie produktów razem z ceną końcową, jeżeli wszystko się zgadza i zatwierdzimy je koszyk oraz zmienna z ceną zostaną wyczyszczone.
 
 ### Opcja 6
 Przerywa wykonywanie pętli programu przez co kończy jego działanie.
