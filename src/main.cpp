@@ -47,10 +47,10 @@ int main() {
             // Petla foreach do dodania kazdego poprawnego elementu wektora products do koszyka
             for (auto& product : products) {
                 if (product.getCode() == code) {
+                    found = true;
                     // Dodanie produktu do koszyka
                     if(basket.addProduct(product, quantity)){
                         std::cout << "Produkt dodany do koszyka.";
-                        found = true;
                         break;
                     }
                 }
@@ -74,10 +74,10 @@ int main() {
             bool found = false;
             for (auto& product : products) {
                 if (product.getCode() == code) {
+                    found = true;
                     // Usuniecie produktu z koszyka
                     if(basket.removeProduct(product, quantity)) {
                         std::cout << "Produkt usuniety z koszyka.";
-                        found = true;
                         break;
                     }
                 }
