@@ -52,6 +52,7 @@ Metoda `Basket::addProduct` już obsługuje oba te przypadki, dzięki czemu doda
 Zmiany ograniczają się głównie do:
 
 * Zastąpienia obecnego odczytu wagi z klawiatury (`std::cin`) logiką odczytu danych z urządzenia.
+  
 Dzięki temu istniejąca struktura kodu, w tym walidacja ilości oraz obsługa koszyka, nie wymaga modyfikacji.
 
 ## Instrukcja obsługi
