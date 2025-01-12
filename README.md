@@ -81,7 +81,7 @@ Pozwala usunąć produkt w całości lub jego część z koszyka poprzez podanie
 Wyświetla aktualną zawartość koszyka z produktami.
 
 ### Opcja 5
-Wyświetla podsumowanie produktów razem z ceną końcową, jeżeli wszystko się zgadza i zatwierdzimy je koszyk oraz zmienna z ceną zostaną wyczyszczone.
+Wyświetla podsumowanie produktów razem z ceną końcową, jeżeli wszystko się zgadza i zatwierdzimy podsumowanie, koszyk oraz zmienna z ceną zostaną wyczyszczone.
 
 ### Opcja 6
 Przerywa wykonywanie pętli programu przez co kończy jego działanie.
